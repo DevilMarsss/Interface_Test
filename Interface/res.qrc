@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>data/userManagement.xls</file>
+        <file alias="network">img/network.jpg</file>
+        <file alias="battery">img/battery.jpg</file>
+        <file alias="controller">img/controller.jpg</file>
+    </qresource>
+</RCC>

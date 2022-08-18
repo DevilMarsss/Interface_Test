@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserManagement</class>
+ <widget class="QDialog" name="UserManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>420</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>420</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+color:rgb(0, 255, 255);
+background:rgb(0, 255, 255);
+font-size:15px;
+font-style:MingLiU-ExtB;
+}
+QWidget{
+border:2px sold rgb(0, 255, 255);
+background:rgb(0, 0, 40);
+}
+QLineEdit{
+color:rgb(0, 255, 255);
+background-color:#405361;
+height:40px;
+border-style:outset;
+border-radius:10px;
+border:2px solid rgb(0, 255, 255);
+font-size:16px;
+font-style:MingLiU-ExtB;
+}
+QPushButton{
+width:150px;
+height:40px;
+border-style:outset;
+border-radius:10px;
+border:2px solid rgb(0, 255, 255);
+font-size:16px;
+font-style:MingLiU-ExtB;
+}
+QPushButton:pressed{
+color:rgb(0, 0, 50);
+background-color:rgb(0, 255, 255);
+border-style:inset;
+font-style:MingLiU-ExtB;
+}
+QLabel{
+color:rgb(0, 255, 255);
+background:rgba(85,170,255,0);
+height:40px;
+font-size:16px;
+font-style:MingLiU-ExtB;
+}
+QTableWidget{
+
+}
+QTableWidget::item:hover{
+color:rgb(0, 0, 50);
+background-color:rgb(0, 255, 255);
+}
+QTableWidget::item:selected{
+color:rgb(0, 0, 50);
+background-color:rgb(0, 255, 255);
+}
+QHeaderView{
+color:rgb(0, 0, 50);
+background:transparent;
+font-size:16px;
+font-style:MingLiU-ExtB;
+}
+QHeaderView:pressed {
+background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <property name="horizontalSpacing">
+    <number>10</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>5</number>
+   </property>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>80</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="AddUserBtn">
+       <property name="text">
+        <string>添加用户</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DelUserBtn">
+       <property name="text">
+        <string>删除用户</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTableWidget" name="UserManagementWidget">
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="UserManagementCloseLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="UserManagementCloseBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 2px solid #8f8f91;
+	border-radius: 6px;
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+	width: 50px;
+	height: 20px;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

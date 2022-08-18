@@ -1,0 +1,3253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+color:rgb(0, 0, 0);
+background:rgb(240, 240, 240);
+font: 20pt &quot;Adobe 黑体 Std R&quot;;
+font-size:16px;
+font-style:MingLiU-ExtB;
+}
+QWidget{
+background:rgb(240, 240, 240);
+}
+QMenuBar{
+font: 18pt &quot;Adobe 黑体 Std R&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(160, 160, 160);
+}
+QMenuBar::item:selected{
+color:rgb(245, 255, 255);
+background-color:rgb(60, 60, 60);
+border-style:inset;
+}
+QMenu{
+font: 18pt &quot;Adobe 黑体 Std R&quot;;
+color:rgb(0, 0, 0);
+background:rgb(245, 255, 255);
+}
+QMenu::item:selected{
+color:rgb(245, 255, 255);
+background-color:rgb(60, 60, 60);
+border-style:inset;
+}
+QMenu::item::pressed{
+color:rgb(252, 255, 255);
+background-color:rgb(50, 50, 50);
+}
+QTextBrowser{
+height:50px;
+background-color:rgb(250,255,255);
+border-style:inset;
+border-radius:10px;
+border:2px solid rgb(222, 222, 222);
+font-size:24px;
+font-style:MingLiU-ExtB;
+}
+QLineEdit{
+color:rgb(0, 0, 0);
+height:50px;
+background-color:rgb(250,255,255);
+border-style:inset;
+border-radius:10px;
+border:2px solid rgb(222, 222, 222);
+font-size:24px;
+font-style:MingLiU-ExtB;
+}
+QPlainTextEdit{
+color:rgb(0, 0, 0);
+background-color:rgb(250,255,255);
+border-style:inset;
+border-radius:10px;
+border:2px solid rgb(222, 222, 222);
+font-size:24px;
+font-style:MingLiU-ExtB;
+}
+QPushButton{
+width:150px;
+height:40px;
+background-color:rgb(253,255,255);
+border-radius:10px;
+border-right:3px groove rgb(222, 222, 222);
+border-bottom:3px groove rgb(222, 222, 222);
+font-size:24px;
+font-style:MingLiU-ExtB;
+}
+QPushButton:pressed{
+color:rgb(60, 60, 60);
+background-color:rgb(250, 255, 255);
+font-style:MingLiU-ExtB;
+}
+QLabel{
+color:rgb(0, 0, 0);
+height:40px;
+font-size:16px;
+font-style:MingLiU-ExtB;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="page_init">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="TitleLabel">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>5000</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25 72pt &quot;Adobe 黑体 Std R&quot;;
+background-color:rgb(248, 255, 255);
+border:10px ridge rgb(245, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>车载网络故障诊断及测试平台</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <layout class="QGridLayout" name="InitLayout">
+          <property name="leftMargin">
+           <number>150</number>
+          </property>
+          <property name="rightMargin">
+           <number>150</number>
+          </property>
+          <property name="bottomMargin">
+           <number>100</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>60</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>50</number>
+          </property>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="PartTestInitBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+width:150px;
+height:550px;
+border-radius:20px;
+border-style:groove;
+background-image:url(:/battery);
+background-repeat:no-repeat;
+background-position:center;
+text-align:bottom;
+font-size:32px;
+font-style:MingLiU-ExtB;
+}</string>
+            </property>
+            <property name="text">
+             <string>电池测试
+</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="NetTestInitBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+width:150px;
+height:550px;
+border-radius:20px;
+border-style:groove;
+background-image:url(:/network);
+background-repeat:no-repeat;
+background-position:center;
+text-align:bottom;
+font-size:32px;
+font-style:MingLiU-ExtB;
+}</string>
+            </property>
+            <property name="text">
+             <string>网络测试
+</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="VehicleTestInitBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+width:150px;
+height:550px;
+border-radius:20px;
+border-style:groove;
+background-image:url(:/controller);
+background-repeat:no-repeat;
+background-position:center;
+text-align:bottom;
+font-size:32px;
+font-style:MingLiU-ExtB;
+}</string>
+            </property>
+            <property name="text">
+             <string>整车测试
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_net">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>50</number>
+        </property>
+        <property name="topMargin">
+         <number>50</number>
+        </property>
+        <property name="rightMargin">
+         <number>50</number>
+        </property>
+        <property name="bottomMargin">
+         <number>50</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>20</number>
+        </property>
+        <item row="6" column="0">
+         <layout class="QGridLayout" name="ProtocolTestLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>10</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>50</number>
+          </property>
+          <item row="3" column="0">
+           <layout class="QGridLayout" name="PeriodicTestLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="PeriodicTestLabel">
+              <property name="text">
+               <string>周期性测试</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="0">
+           <layout class="QGridLayout" name="AlgorithmTestLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="AlgorithmTestLabel">
+              <property name="text">
+               <string>算法测试</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
+           <layout class="QGridLayout" name="ResponseTestLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="ResponseTestLabel">
+              <property name="text">
+               <string>应答测试</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="ProtocolTestLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt &quot;Adobe 宋体 Std L&quot;;</string>
+          </property>
+          <property name="text">
+           <string>协议测试</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <layout class="QGridLayout" name="RateTestLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>50</number>
+          </property>
+          <item row="0" column="2">
+           <widget class="QPlainTextEdit" name="RecordDisplay"/>
+          </item>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="ControlLayout">
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>20</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>10</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QTextBrowser" name="SendRateTxt">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="BitSetLine">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="BitSetLabel">
+              <property name="text">
+               <string>设置波特率</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QTextBrowser" name="DropAmountTxt">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="DropAmountLabel">
+              <property name="text">
+               <string>掉包量</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="RecRateLabel">
+              <property name="text">
+               <string>接收速率</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="SendRateLabel">
+              <property name="text">
+               <string>发送速率</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QTextBrowser" name="DropRateTxt">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="DropRateLabel">
+              <property name="text">
+               <string>掉包率</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QTextBrowser" name="RecRateTxt">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="TransmissionLayout">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BitSetBtn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+width:120px;
+height:50px;
+}</string>
+              </property>
+              <property name="text">
+               <string>确认</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="SendOnceBtn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+width:120px;
+height:50px;
+}</string>
+              </property>
+              <property name="text">
+               <string>单次发送</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="SendContinuousBtn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+width:120px;
+height:50px;
+}</string>
+              </property>
+              <property name="text">
+               <string>持续发送</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="RecContinuousBtn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+width:120px;
+height:50px;
+}</string>
+              </property>
+              <property name="text">
+               <string>持续接收</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ClearLogBtn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+width:120px;
+height:50px;
+}</string>
+              </property>
+              <property name="text">
+               <string>清除记录</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="RateTestLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt &quot;Adobe 宋体 Std L&quot;;</string>
+          </property>
+          <property name="text">
+           <string>速率测试</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_battery">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="PartTestLabel">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt</string>
+          </property>
+          <property name="text">
+           <string>电池诊断测试</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="batteryTestMainControlLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="Remain1">
+            <property name="text">
+             <string>此处预留电机界面主要显示参数</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="Remain2">
+            <property name="text">
+             <string>此处预留电池界面主要显示参数</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="OBCInterfaceBtn">
+            <property name="text">
+             <string>OBC</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="BMSInterfaceBtn">
+            <property name="text">
+             <string>BMS</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_VCU">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="VCUgridLayout">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>10</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>50</number>
+          </property>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="VCU_0x631_o2_txt"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="VCU_0x214_o6_label">
+            <property name="text">
+             <string>VCU唤醒BMS指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="VCU_0x214_o3_label">
+            <property name="text">
+             <string>电池包加热允许</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="VCU_0x214_o5_label">
+            <property name="text">
+             <string>慢充唤醒信号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o4_txt"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o2_txt"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="VCU_0x631_o1_label">
+            <property name="text">
+             <string>整车故障处理等级</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="VCU_0x631_o2_label">
+            <property name="text">
+             <string>整车最高报警等级</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="VCU_0x214_o2_label">
+            <property name="text">
+             <string>充电允许指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o3_txt"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="VCU_0x214_o1_label">
+            <property name="text">
+             <string>整车上高压指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o6_txt"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="VCU_0x214_o4_label">
+            <property name="text">
+             <string>快充唤醒信号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QTextBrowser" name="VCU_0x631_o1_txt"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o5_txt"/>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="VCU_0x701_label">
+            <property name="text">
+             <string>VCU_CAN唤醒BMS信号</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QTextBrowser" name="VCU_0x701_txt"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="VCU_0x214_o1_txt"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QPushButton" name="VCU_Button">
+          <property name="styleSheet">
+           <string notr="true">height:80px;
+background-color:rgb(253,255,255);
+border-radius:0px;
+border-top:3px groove rgb(222, 222, 222);
+border-right:0px;
+font-size:24px;
+font-style:MingLiU-ExtB;
+font:40px;</string>
+          </property>
+          <property name="text">
+           <string>整 车 测 试</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_dataRR">
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QLabel" name="dataRRInterfaceLabel">
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt &quot;Adobe 宋体 Std L&quot;;</string>
+          </property>
+          <property name="text">
+           <string>数据记录与回放     界面</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_OBC">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="6">
+         <layout class="QGridLayout" name="OBCgridLayout_2">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>50</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <property name="bottomMargin">
+           <number>50</number>
+          </property>
+          <property name="spacing">
+           <number>50</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D3_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D3_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="OBC_0x6D3_o3_label">
+            <property name="text">
+             <string>车载充电机交流端电流</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="OBC_0x6D3_o5_label">
+            <property name="text">
+             <string>车载充电机当前状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="OBC_0x6D3_o1_label">
+            <property name="text">
+             <string>车载充电机交流端电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D3_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D3_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="OBC_0x6D3_o4_label">
+            <property name="text">
+             <string>电网断网标志位</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="OBC_0x6D3_o2_label">
+            <property name="text">
+             <string>车载充电机温度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D3_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="OBC_0x6D7_label">
+            <property name="text">
+             <string>OBC可输出最大功率</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="OBC_0x6D7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="OBCInterfaceLabel">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt &quot;Adobe 宋体 Std L&quot;;</string>
+          </property>
+          <property name="text">
+           <string>OBC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <layout class="QGridLayout" name="OBCgridLayout_1">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>50</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>50</number>
+          </property>
+          <property name="spacing">
+           <number>50</number>
+          </property>
+          <item row="4" column="2">
+           <widget class="QTextBrowser" name="OBC_0x480_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="OBC_0x480_o2_label">
+            <property name="text">
+             <string>车载充电机直流端电流</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QTextBrowser" name="OBC_0x6D4_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="OBC_0x480_o1_label">
+            <property name="text">
+             <string>充放电枪连续状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QTextBrowser" name="OBC_0x480_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="OBC_0x6D4_o1_label">
+            <property name="text">
+             <string>BMS唤醒OBC电源状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QTextBrowser" name="OBC_0x480_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="OBC_0x480_o3_label">
+            <property name="text">
+             <string>车载充电机直流端电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QTextBrowser" name="OBC_0x480_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QTextBrowser" name="OBC_0x480_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="OBC_0x480_o4_label">
+            <property name="text">
+             <string>供电设备状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="OBC_0x480_o5_label">
+            <property name="text">
+             <string>S2开关状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="OBC_0x6D4_o2_label">
+            <property name="text">
+             <string>车载充电机额定功率</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QTextBrowser" name="OBC_0x6D4_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="7">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_BMS">
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="1" column="1">
+         <layout class="QGridLayout" name="BMS_0x451">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x451_o3_label">
+            <property name="text">
+             <string>BMS状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="BMS_0x451_o7_label">
+            <property name="text">
+             <string>动力电池
+外部总电压V2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o8_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BMS_0x451_o5_label">
+            <property name="text">
+             <string>充电请求</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o6_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x451_o8_label">
+            <property name="text">
+             <string>动力电池
+负载端总电压V3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x451_o2_label">
+            <property name="text">
+             <string>禁止直流充电
+标志位</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x451_o4_label">
+            <property name="text">
+             <string>快充电枪
+连接状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x451_o1_label">
+            <property name="text">
+             <string>车辆充放电模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x451_o6_label">
+            <property name="text">
+             <string>禁止高压上电
+标志位</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="BMS_0x451_o9_label">
+            <property name="text">
+             <string>动力电池
+内部总电压V1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QTextBrowser" name="BMS_0x451_o9_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QGridLayout" name="BMS_0x457_0x458_0x61C_0x61D">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="2">
+           <widget class="QTextBrowser" name="BMS_0x458_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x458_o2_label">
+            <property name="text">
+             <string>高压下电请求
+（充放电专用）</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QTextBrowser" name="BMS_0x457_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61C_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o10_label">
+            <property name="text">
+             <string>动力电池
+加热保温需求
+判断完成</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o1_label">
+            <property name="text">
+             <string>动力电池
+保温状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o2_label">
+            <property name="text">
+             <string>动力电池
+加热状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o8_label">
+            <property name="text">
+             <string>充电状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o7_label">
+            <property name="text">
+             <string>慢充充电
+电流阶段</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o8_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x458_o1_label">
+            <property name="text">
+             <string>充放电
+上电准备就绪</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61C_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x61C_o3_label">
+            <property name="text">
+             <string>快充桩
+最大输出电流</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QTextBrowser" name="BMS_0x458_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o5_label">
+            <property name="text">
+             <string>电池预加热
+保温需求</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o9_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o10_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x457_label">
+            <property name="text">
+             <string>动力电池
+充/放电电流</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o4_label">
+            <property name="text">
+             <string>动力电池
+充电需求状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x61C_o1_label">
+            <property name="text">
+             <string>车载充电机
+输出电压指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o6_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61C_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o9_label">
+            <property name="text">
+             <string>动力电池
+加热继电器状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QTextBrowser" name="BMS_0x61D_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o6_label">
+            <property name="text">
+             <string>高压下电请求
+(BMS)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BMS_0x61C_o2_label">
+            <property name="text">
+             <string>车载充电机
+输出电流指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o3_label">
+            <property name="text">
+             <string>快充充电
+电流阶段</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="4">
+         <layout class="QGridLayout" name="BMS_0x6C1">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o5_label">
+            <property name="text">
+             <string>动力电池
+高压检测状态超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o6_label">
+            <property name="text">
+             <string>高压系统
+预充电状态超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o8_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o1_label">
+            <property name="text">
+             <string>动力电池
+高压连接状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o2_label">
+            <property name="text">
+             <string>BMS
+最高报警等级</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o9_label">
+            <property name="text">
+             <string>部件存挡状态超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o10_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o9_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o8_label">
+            <property name="text">
+             <string>动力电池
+正端继电器
+断开状态超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o12_label">
+            <property name="text">
+             <string>快充CC2电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o3_label">
+            <property name="text">
+             <string>动力电池
+温度指示灯</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o11_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o10_label">
+            <property name="text">
+             <string>直流充电
+正端继电器
+控制指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o7_label">
+            <property name="text">
+             <string>高压系统
+检测状态超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o12_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o6_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o11_label">
+            <property name="text">
+             <string>慢充CC电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o4_label">
+            <property name="text">
+             <string>快慢充
+正常充满
+结束标志位</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="BMS_0x450_0x452_0x453">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="9" column="0">
+           <widget class="QLabel" name="BMS_0x452_o3_label">
+            <property name="text">
+             <string>动力电池
+正极对GND
+绝缘电阻</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1">
+           <widget class="QTextBrowser" name="BMS_0x453_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x450_o1_label">
+            <property name="text">
+             <string>S1开关指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o6_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x452_o1_label">
+            <property name="text">
+             <string>电池均衡激活</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QTextBrowser" name="BMS_0x452_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="BMS_0x452_o2_label">
+            <property name="text">
+             <string>最大可用
+充电电流</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="1">
+           <widget class="QTextBrowser" name="BMS_0x453_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x450_o6_label">
+            <property name="text">
+             <string>BMS
+自检计数器</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="BMS_0x452_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x450_o4_label">
+            <property name="text">
+             <string>当前状态允许
+最大放电功率</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BMS_0x450_o5_label">
+            <property name="text">
+             <string>动力电池
+剩余电量SOC</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="BMS_0x452_o4_label">
+            <property name="text">
+             <string>动力电池
+负极对GND
+绝缘电阻</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x450_o2_label">
+            <property name="text">
+             <string>SOE值</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="BMS_0x453_o3_label">
+            <property name="text">
+             <string>单体电芯
+最高温度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x450_o3_label">
+            <property name="text">
+             <string>当前状态允许
+最大回馈功率</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QTextBrowser" name="BMS_0x450_o7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QTextBrowser" name="BMS_0x452_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="BMS_0x453_o4_label">
+            <property name="text">
+             <string>电池包
+平均温度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QTextBrowser" name="BMS_0x453_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="BMS_0x453_o2_label">
+            <property name="text">
+             <string>单体电芯
+温度极差</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="BMS_0x453_o1_label">
+            <property name="text">
+             <string>单体电芯
+最低温度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="BMS_0x450_o7_label">
+            <property name="text">
+             <string>BMS
+初始化状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="1">
+           <widget class="QTextBrowser" name="BMS_0x453_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QTextBrowser" name="BMS_0x452_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="5">
+         <layout class="QGridLayout" name="BMS_0x6C1_0x6C3">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o15_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x6C3_o1_label">
+            <property name="text">
+             <string>动力电池包
+加热请求</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o13_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o14_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C3_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o13_label">
+            <property name="text">
+             <string>动力电池
+负端继电器
+控制指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o15_label">
+            <property name="text">
+             <string>动力电池
+预充电继电器
+控制指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x6C3_o3_label">
+            <property name="text">
+             <string>单体电芯
+最低电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C3_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o14_label">
+            <property name="text">
+             <string>动力电池
+正端继电器
+控制指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o16_label">
+            <property name="text">
+             <string>直流充电
+负端继电器
+控制指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o17_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C1_o16_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="BMS_0x6C3_o4_label">
+            <property name="text">
+             <string>单体电芯
+最高电压</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="BMS_0x6C3_o2_label">
+            <property name="text">
+             <string>动力电池SOH</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="BMS_0x6C1_o17_label">
+            <property name="text">
+             <string>充放电上电引导
+等待超时</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C3_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="BMS_0x6C3_o5_label">
+            <property name="text">
+             <string>交流充电
+剩余充电时间</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C3_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QTextBrowser" name="BMS_0x6C3_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="3">
+         <layout class="QGridLayout" name="BMS_0x61D_0x655">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="1">
+           <widget class="QTextBrowser" name="BMS_0x61D_o13_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="BMS_0x655_o4_label">
+            <property name="text">
+             <string>达到总电压
+设定值状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="BMS_0x655_o7_label">
+            <property name="text">
+             <string>直流充电
+电流过大</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o5_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o3_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="BMS_0x655_o9_label">
+            <property name="text">
+             <string>直流充电
+剩余充电时间</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o7_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o8_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o9_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o13_label">
+            <property name="text">
+             <string>S2开关控制命令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o2_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="BMS_0x655_o3_label">
+            <property name="text">
+             <string>达到所需求的
+SOC目标值状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextBrowser" name="BMS_0x61D_o12_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="BMS_0x655_o2_label">
+            <property name="text">
+             <string>直流充电机
+主动请求停止</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QTextBrowser" name="BMS_0x61D_o11_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o4_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o1_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="BMS_0x655_o8_label">
+            <property name="text">
+             <string>直流充电
+电压异常</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o11_label">
+            <property name="text">
+             <string>充电枪
+再次插入状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="BMS_0x655_o5_label">
+            <property name="text">
+             <string>达到单体电压
+设定值状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="BMS_0x61D_o12_label">
+            <property name="text">
+             <string>车载充电机
+工作指令</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="BMS_0x655_o1_label">
+            <property name="text">
+             <string>直流充电
+允许状态</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="BMS_0x655_o6_label">
+            <property name="text">
+             <string>动力电池组
+温度过高</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1">
+           <widget class="QTextBrowser" name="BMS_0x655_o6_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="6">
+         <widget class="QLabel" name="BMSInterfaceLabel">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25 20pt &quot;Adobe 宋体 Std L&quot;;</string>
+          </property>
+          <property name="text">
+           <string>电池管理系统</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="userManagement">
+    <property name="title">
+     <string>用户管理</string>
+    </property>
+    <addaction name="log_action"/>
+    <addaction name="logout_action"/>
+    <addaction name="changeKey_action"/>
+    <addaction name="separator"/>
+    <addaction name="browse_action"/>
+    <addaction name="separator"/>
+    <addaction name="exit_action"/>
+   </widget>
+   <widget class="QMenu" name="APPfunction">
+    <property name="title">
+     <string>功能</string>
+    </property>
+    <addaction name="DiagnosisMonitor"/>
+    <addaction name="Record"/>
+    <addaction name="Review"/>
+   </widget>
+   <widget class="QMenu" name="Help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="userManagement"/>
+   <addaction name="APPfunction"/>
+   <addaction name="Help"/>
+  </widget>
+  <action name="log_action">
+   <property name="text">
+    <string>用户登录</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="changeKey_action">
+   <property name="text">
+    <string>修改密码</string>
+   </property>
+  </action>
+  <action name="browse_action">
+   <property name="text">
+    <string>浏览用户</string>
+   </property>
+  </action>
+  <action name="addUser_action">
+   <property name="text">
+    <string>添加用户</string>
+   </property>
+   <property name="toolTip">
+    <string>添加用户</string>
+   </property>
+  </action>
+  <action name="logout_action">
+   <property name="text">
+    <string>注销登录</string>
+   </property>
+  </action>
+  <action name="delUser_action">
+   <property name="text">
+    <string>删除用户</string>
+   </property>
+  </action>
+  <action name="ProtocolSet">
+   <property name="text">
+    <string>协议配置</string>
+   </property>
+  </action>
+  <action name="ProtocolImport">
+   <property name="text">
+    <string>协议导入</string>
+   </property>
+  </action>
+  <action name="DiagnosisMonitor">
+   <property name="text">
+    <string>诊断与监控</string>
+   </property>
+  </action>
+  <action name="Record">
+   <property name="text">
+    <string>记录</string>
+   </property>
+  </action>
+  <action name="Review">
+   <property name="text">
+    <string>回放</string>
+   </property>
+  </action>
+  <action name="exit_action">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出程序</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
